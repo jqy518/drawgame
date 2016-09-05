@@ -11,4 +11,3 @@ npm install
 npm start
 *运行
 浏览器·http://localhost:3000·输入用户名开始游戏。
-
