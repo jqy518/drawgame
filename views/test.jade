@@ -1,0 +1,10 @@
+DOCTYPE HTML
+html
+  head
+    title test demo
+  body
+    ul#nav
+      - each val in links
+        li
+         a(href="#{val.link}") #{val.name}
+    script(src="/javascripts/test.js")

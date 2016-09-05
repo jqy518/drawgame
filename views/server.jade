@@ -1,0 +1,56 @@
+extend layout
+block content
+  div.container.loginbox
+    div.row
+      div.col-md-6.col-md-offset-3.loginInner
+        .input-group
+          input#username.form-control(placeholder="请输入昵称",type="text")
+          span.input-group-btn
+            button#addgame.btn.btn-primary(type="button") 加入游戏
+  div#operationBox.container(style="margin-top:20px;display:none;")
+    div.row
+      div.col-md-6        
+        .canvas-container(style="width: 500px; height: 550px; position: relative; -moz-user-select: none;")
+          canvas#c(width="500",height="500",style="border:1px solid #aaa")
+          form.form-inline
+            #drawing-mode-options
+              button#clear-canvas.btn.btn-info.btn-xs(type="button") 清除
+              label(for="drawing-mode-selector") 模式:
+              select#drawing-mode-selector
+                option Pencil
+                option Circle
+                option Spray
+                option Pattern
+                option hline
+                option vline
+                option square
+                option diamond
+                option texture
+              label(for="drawing-line-width") 线条大小:
+              span.info 5
+              input#drawing-line-width(type="range",value="5",min="0",max="150")
+              label(for="drawing-color") 线条颜色:
+              input#drawing-color(type="color",value="#005E7A")
+        canvas#d(width="500",height="500",style="border:1px solid #aaa")
+      div.col-md-2
+        h1.word 太极
+        p.wordremark 一种古老的运动
+        h3.timeshow
+        div.addBox
+          input#keyword.form-control(type="text")
+          textarea#description.form-control
+          button#addword.btn.btn-primary(type="button") 添加新词
+      div.col-md-4
+        #messageBox
+          ul.chatUl
+        .input-group
+          input#content.form-control(placeholder="请输入内容",type="text")
+          span.input-group-btn
+            button#sendMeg.btn.btn-primary(type="button") 确定
+
+
+  script(src="/javascripts/jquery-1.9.1.min.js")
+  script(src="/javascripts/fabric.js-1.6.3/fabric.js-1.6.3/dist/fabric.min.js")
+  script(src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/draw.js")

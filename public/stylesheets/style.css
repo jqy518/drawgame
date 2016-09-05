@@ -1,0 +1,84 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+ul,li{ padding:0; margin:0px; }
+a {
+  color: #00B7FF;
+}
+.uploadBox{ width:200px; height:200px; border: 1px dashed #ccc; background:#fefefe; position: relative; text-align: center;}
+.file {
+    position:absolute;
+    top:150px;
+    left:50px;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.canvas-container {
+    border: 1px dotted #ccc;
+    display: inline-block;
+    vertical-align: top;
+}
+#drawing-mode {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+#drawing-mode-options {
+  display: inline-block;
+  width:500px;
+  height:50px;
+  vertical-align: top;
+  background: #f5f2f0;
+}
+label {
+  display: inline-block; width: 80px;
+}
+.info {
+  display: inline-block;
+  width: 25px;
+  background: #ffc;
+}
+#bd-wrapper {
+  min-width: 1500px;
+}
+#drawing-line-width{ width: 60px; display: inline-block; vertical-align:middle; }
+#messageBox{width: 100%; overflow-y:scroll; height: 450px; background: #eee;}
+.chatUl{ width: 100%; display: table; }
+.chatUl li{ display: inline; max-width: 80%; border-radius:5px; position: relative; padding:5px; list-style: none; margin: 5px auto; clear: both; }
+.chatUl li::after {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 10px;
+    width: 0;
+}
+.chatUl li span{ position: absolute; width: 60px; word-wrap:normal; overflow: hidden; }
+.chatUl .server{ float: left; margin-left: 60px; background: #fff; }
+.chatUl .server span{left: -60px; top: 5px;}
+.chatUl .server::after{border-left: 10px solid transparent;left: -10px; border-top: 10px solid #fff;}
+.chatUl .user{ float: right; margin-right: 60px; background: #31A2F2;  color: #fff;}
+.chatUl .user span{right: -60px; top: 5px; text-align: right; color: #000;}
+.chatUl .user::after{border-right: 10px solid transparent;right: -10px; border-top: 10px solid #31A2F2; }
+.word{ font-family: "微软雅黑"; }
+.wordremark{ font-family: "微软雅黑";  }

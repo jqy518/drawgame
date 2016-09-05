@@ -1,0 +1,10 @@
+extends layout
+include upload
+block script
+  script(type="text/javascript",src="/javascripts/jquery-1.9.1.min.js")
+  script(type="text/javascript",src="/javascripts/upload.js")
+
+block content
+  h1= title
+  p Welcome to #{title}
+  +upload('ufile','{"filedname":"ufile","url":"/upload","fileid":"ufile","uploadBtn":"uploadDo"}')

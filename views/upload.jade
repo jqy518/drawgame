@@ -1,0 +1,8 @@
+mixin upload(fildname,params)
+  .uploadBox
+    a(href="javascript:;",class="file")
+      input(type="file",name=fildname,accept="imgage/*",id=fildname,class="uploadBtn",multiple="multiple")
+      选择文件
+  button(type="button",id="uploadDo") 上传图片
+    script
+        |JQYFILE.init(!{params});
